@@ -3,4 +3,7 @@
 
 ![](assets/teaser.jpg)
 
-Code will be released soon!
+This project will follow a staged code release.
+
+- [ ] Method (13th March, 2024)
+- [ ] Evaluation (20th March, 2024)
