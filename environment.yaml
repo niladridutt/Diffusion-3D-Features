@@ -1,0 +1,26 @@
+name: diff3f
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - matplotlib=3.7.1
+  - numpy=1.25.0
+  - scikit-learn=1.2.2
+  - scipy=1.10.1
+  - meshplot
+  - xformers==0.0.21
+  - pip:
+    - diffusers==0.21.4
+    - einops==0.7.0
+    - huggingface-hub==0.17.3
+    - meshio==5.3.4
+    - meshplot
+    - opencv-python==4.8.1.78
+    - plyfile==1.0.1
+    - torch==2.1.0
+    - torchvision
+    - transformers==4.34.1
+    - trimesh==4.0.0
+    - potpourri3d==1.0.0
+    - robust_laplacian==0.2.7
