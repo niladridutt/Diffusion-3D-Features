@@ -5,11 +5,14 @@
 
 ## Setup
 `conda env create -f environment.yaml`
+
 `conda activate diff3f`
 
 ### Additional prerequisites
 Install pytorch3d ([deatiled installation instructions](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md))
+
 `conda install -c fvcore -c iopath -c conda-forge fvcore iopath`
+
 You might face difficulty in installing pytorch3d and encounter the error `ModuleNotFoundError: No module named 'pytorch3d` during run time. Unfortunately, this is because pytorch3d could not be installed properly. Please refer [here](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md) for alternate ways to install pytorch3d. 
 
 ## Usage
