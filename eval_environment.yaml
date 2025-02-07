@@ -1,4 +1,4 @@
-name: thesis
+name: diff3f-eval
 channels:
   - pytorch
   - nvidia
