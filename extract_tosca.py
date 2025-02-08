@@ -30,7 +30,7 @@ random_seed = 42
 rotated = False
 use_normal_map = True
 dataset = "TOSCA"
-prompt = "human"
+prompt = "animal extracted from file name"
 target_path = (
     "datasets/tosca/Meshes/*.off"
 )
@@ -87,6 +87,8 @@ def compute_features():
             m = MeshContainer().load_from_file(str(file))
             mesh = convert_mesh_container_to_torch_mesh(m, device=device, is_tosca=True)
             mesh_vertices = mesh.verts_list()[0]
+            prompt = "".join(filter(str.isalpha, filename))
+            print("Prompt: ", prompt)
             features = get_features_per_vertex(
                 device=device,
                 pipe=pipe, 
