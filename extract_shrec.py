@@ -30,7 +30,7 @@ random_seed = 42
 rotated = False
 use_normal_map = True
 dataset = "SHREC"
-prompt = "human"
+prompt = "naked human" # "human" should also work fine but this leads to 0.5% improvement
 target_path = (
     "datasets/shrec/off_2/*.off"
 )
