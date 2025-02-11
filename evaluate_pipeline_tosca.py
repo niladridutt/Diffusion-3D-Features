@@ -65,8 +65,10 @@ def main():
     df = pd.DataFrame(shape_correspondence.tracks)
     df.insert(0,"pair",pairs)
     df.to_csv(save_path, index=False)
+    print("Mean error distance: ", df['acc_mean_dist'].mean())
+    print("Accuracy at 1%: ", df['acc_0.01'].mean())
 
-    print("see stats at generated csv, compute mean accuracy and error from there")
+    print("see more stats in generated csv")
 
 
 if __name__ == "__main__":
