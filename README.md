@@ -24,6 +24,16 @@ You might face difficulty in installing pytorch3d or encounter the error `Module
 ## Usage
 Please check the example notebook [test_correspondence.ipynb](test_correspondence.ipynb) for details on computing features for a mesh and finding correspondence/part segmentations. 
 
+## Datasets
+[SHREC'19 remeshed dataset](https://nuage.lix.polytechnique.fr/index.php/s/LJFXrsTG22wYCXx/download?path=%2F&files=SHREC_r.zip) | [SHREC'19 GT](https://nuage.lix.polytechnique.fr/index.php/s/LJFXrsTG22wYCXx/download?path=%2F&files=SHREC_r_gt.zip) | This is a more challenging version of the dataset for topology dependent methods
+
+[Original SHREC'19 dataset](https://profs.scienze.univr.it/~marin/shrec19/SHREC19_MH_dataset.zip) | Please use this version of the dataset when using point cloud renders as it has higher res meshes
+
+[TOSCA and SHREC'07](http://www.vovakim.com/projects/CorrsBlended/SurfCorr2.0.benchmarks.bins.zip)
+
+[SHREC'20](http://robertodyke.com/shrec2020/index2.html)
+
+
 ## Evaluation
 Much of the code for evaluation is based upon [SE-ORNet](https://github.com/OpenSpaceAI/SE-ORNet) with some tweaks to decouple it from the method and make it work for precomputed correspondence (there is no change in the computation of core metrics).
 Building the environment for evaluation can be painful as it involves building multiple CUDA packages for 3D, for installation please refer to [SE-ORNet](https://github.com/OpenSpaceAI/SE-ORNet/blob/main/setup.sh) or [DPC](https://github.com/dvirginz/DPC/blob/main/installation.sh). If you can get their code to run, this will also work flawlessly. The main issue is usually to get diffusers and pytorch3d working with the dependencies mentioned in SE-ORNet/DPC but this is not essential as you can keep two separate environemnts-- one to extract mesh features and another to perform the evaluation. Therefore, building the environment from SE-ORNet/DPC alone might be enough.
